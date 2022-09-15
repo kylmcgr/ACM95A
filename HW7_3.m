@@ -1,0 +1,21 @@
+t0=0;
+tf=1;
+dt=0.025;
+t=0:dt:1;
+N=(tf-t0)/dt;
+f=@(t,y) (y^2+2*t*y)/(3+t^2);
+yExact=@(t) (3+t.^2)./(6-t);
+y=zeros(1,N+1);
+y(1)=1/2;
+
+for n = 1:N
+    k1=f(t(n),y(n));
+    k2=f(t(n)+dt/2,y(n)+dt/2*k1);
+    k3=f(t(n)+dt/2,y(n)+dt/2*k2);
+    k4=f(t(n)+dt,y(n)+dt*k3);
+    y(n+1)=y(n)+dt*(k1+2*k2+2*k3+k4)/6;
+end
+disp(y(1:10))
+disp(yExact(t(1:10)))
+disp(yExact(t(1:10))-y(1:10))
+p1 = plot(t,yExact(t)-y,'r-o');
