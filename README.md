@@ -1,5 +1,5 @@
-# ACM95a
-Coursework for Caltech ACM 95a - Introductory Methods of Applied Mathematics for the Physical Sciences (WI 2020-21)
+# ACM95A
+Coursework for Caltech ACM 95A - Introductory Methods of Applied Mathematics for the Physical Sciences (WI 2020-21)
 
 **Caltech Honor Code: No member of the Caltech community shall take unfair advantage of any other member of the Caltech community.**
 
